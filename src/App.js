@@ -4,11 +4,11 @@ import PieDePagina from './componentes/PiedePagina';
 
 function App() {
   return (
-    <div>
+    <main>
       <h1>Hola Mundo</h1>
       <Encabezado />
       <PieDePagina />
-    </div>
+    </main>
   );
 }
 
