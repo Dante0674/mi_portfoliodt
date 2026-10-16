@@ -1,8 +1,9 @@
 import React from 'react';
+
 function Encabezado() {
   return (
     <header>
-      <h2>Soy el Encabezado</h2>
+      <h2> Encabezado </h2>
     </header>
   );
 }
