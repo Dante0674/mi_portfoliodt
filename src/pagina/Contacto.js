@@ -1,11 +1,13 @@
 import React from 'react';
-import PieDePagina from '../componentes/PiedePagina';
+import Formulario from '../componentes/Formulario';
+import PieDePagina from '../componentes/PieDePagina';
 
 function Contacto() {
   return (
     <>
-      <h1> Contacto </h1>
-       <PieDePagina />
+      <h1>Formulario de Contacto</h1>
+       <Formulario/>
+       <PieDePagina/>
     </>
   );
 }

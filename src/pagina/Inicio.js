@@ -1,5 +1,5 @@
 import React from 'react';
-import PieDePagina from '../componentes/PiedePagina';
+import PieDePagina from '../componentes/PieDePagina';
 
 function Inicio() {
   return (
