@@ -1,8 +1,7 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-function Formulario () {
-
+function Formulario() {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -15,7 +14,7 @@ function Formulario () {
       .then(
         () => {
           console.log('SUCCESS!');
-          alert('Correo enviado');
+          alert('¡Correo enviado!');
           form.current.reset(); 
         },
         (error) => {
@@ -27,15 +26,31 @@ function Formulario () {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <label>Nombre</label>
-      <input type="text" name="name" required /> 
-      <label>Email</label>
-      <input type="email" name="email" required />
-      <label>Mensaje</label>
-      <textarea name="message" required />
-      <input type="submit" value="Enviar" />
+      
+      <div>
+        <label>Nombre:</label>
+        <br />
+        <input type="text" name="name" required />
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <br />
+        <input type="email" name="email" required />
+      </div>
+
+      <div>
+        <label>Mensaje:</label>
+        <br />
+        <textarea name="message" required rows="4" />
+      </div>
+
+      <br />
+      
+      <input type="submit" value="Enviar Mensaje" />
+      
     </form>
   );
-};
+}
 
 export default Formulario;
