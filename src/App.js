@@ -5,31 +5,32 @@ import PieDePagina from './componentes/PieDePagina';
 import Inicio from './pagina/Inicio';
 import Servicios from './pagina/Servicios';
 import Contacto from './pagina/Contacto';
-import NoExiste from './pagina/NoExiste'
-import Perfil from './pagina/Perfil';
+import NoExiste from './pagina/NoExiste';
 
 function App() {
   return (
-   
-      <BrowserRouter>
-        <main>
-        <Encabezado/>
-                
-        <Routes>
-             <Route path="/"           element={<Inicio/>} />
-             <Route path="/Inicio"     element={<Inicio/>} />
-             <Route path="/Servicios"  element={<Servicios/>} />
-             <Route path="/Contacto"   element={<Contacto/>} />
-             <Route path="/perfil/:id" element={<Perfil/>} />
-             <Route path="*"           element={<NoExiste/>} />
-        </Routes>
+    <BrowserRouter>
+      {/* 1. Este div envuelve todo y usa Flexbox en columna */}
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        
+        <Encabezado />
+        
+        {/* 2. Al main le decimos que ocupe todo el espacio disponible (flex: 1) */}
+        <main style={{ flex: 1, backgroundColor: '#f4f4f9' }}>
+          <Routes>
+            <Route path="/" element={<Inicio/>} />
+            <Route path="/Inicio" element={<Inicio/>} />
+            <Route path="/Servicios" element={<Servicios/>} />
+            <Route path="/Contacto" element={<Contacto/>} />
+            <Route path="*" element={<NoExiste/>} />
+          </Routes>
+        </main>
 
         <PieDePagina />
         
-        </main>
-
-      </BrowserRouter>
-    );
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
