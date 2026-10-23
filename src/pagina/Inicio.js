@@ -23,7 +23,7 @@ function Inicio() {
           style={{ width: '150px', height: '150px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #333' }} 
         />
         <h1>Hola, soy Dante</h1>
-        <h3>Estudiante de Desarrollador de Aplicaciones Web</h3>
+        <h3>Estudiante de Desarrollador de Aplicaciones</h3>
         <p style={{ maxWidth: '600px', margin: '20px auto', fontSize: '18px' }}>
           Bienvenido a mi portafolio. Soy estudiante de programación web II.
         </p>
