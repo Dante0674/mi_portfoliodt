@@ -32,7 +32,7 @@ function Formulario() {
         <br />
         <input type="text" name="name" required />
       </div>
-git add .git add .
+
       <div>
         <label>Email:</label>
         <br />

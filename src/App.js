@@ -10,13 +10,12 @@ import NoExiste from './pagina/NoExiste';
 function App() {
   return (
     <BrowserRouter>
-      {/* 1. Este div envuelve todo y usa Flexbox en columna */}
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         
         <Encabezado />
         
-        {/* 2. Al main le decimos que ocupe todo el espacio disponible (flex: 1) */}
-        <main style={{ flex: 1, backgroundColor: '#f4f4f9' }}>
+        
+         <main style={{ flex: 1, backgroundColor: '#f4f4f9' }}>>
           <Routes>
             <Route path="/" element={<Inicio/>} />
             <Route path="/Inicio" element={<Inicio/>} />

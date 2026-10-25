@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router';
 
 function Perfil() {
-  // Atrapamos el ID de la URL (ej: si la URL es /perfil/1, el id es "1")
   const { id } = useParams();
 
   return (
