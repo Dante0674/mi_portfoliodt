@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import Encabezado from './componentes/Encabezado';
 import PieDePagina from './componentes/PieDePagina';
 import Inicio from './pagina/Inicio';
@@ -9,7 +9,7 @@ import NoExiste from './pagina/NoExiste';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         
         <Encabezado />
@@ -28,7 +28,7 @@ function App() {
         <PieDePagina />
         
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

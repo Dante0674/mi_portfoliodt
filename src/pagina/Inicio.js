@@ -6,10 +6,11 @@ function Inicio() {
   // Guardo los personajes
   const [personajes, setPersonajes] = useState([]); 
   
-  // Traemos los personajes de Rick and Morty
+  // Traemos los personajes de Harry Potter
   useEffect(() => { 
-    axios.get('https://rickandmortyapi.com/api/character')
-      .then((valores) => setPersonajes(valores.data.results.slice(0, 6))); // Solo 6 con slice
+    axios.get('https://hp-api.onrender.com/api/characters')
+      .then((valores) => setPersonajes(valores.data.slice(0, 4))) // Solo 4 con slice
+      .catch((error) => console.log("Error al cargar la API", error));  
   }, []);
 
   return (
@@ -30,19 +31,17 @@ function Inicio() {
 
       {/* API */}
       <div style={{ textAlign: 'center', marginTop: '40px' }}>
-        <h2>Personajes de Rick and Morty</h2>
+        <h2>Personajes de Harry Potter</h2>
         <p>Consumiendo una API pública para mostrar información.</p>
         
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', marginTop: '20px' }}>
           {personajes.map((d) => (
-            <div key={d.id} style={{ 
-              border: '1px solid #ccc', padding: '15px', borderRadius: '10px', width: '200px', backgroundColor: '#fff', boxShadow: '2px 2px 8px rgba(0,0,0,0.1)' 
-            }}>
-              <img src={d.image} alt={d.name} style={{ width: '100%', borderRadius: '5px' }} />
-              <h3 style={{ margin: '10px 0 5px 0' }}>{d.name}</h3>
-              <p  style={{ margin: '5px 0' }}><strong>Estado:</strong> {d.status}</p>
-              <p  style={{ margin: '5px 0' }}><strong>Especie:</strong> {d.species}</p>
-            </div>
+    <div key={d.id}>
+      <img src={d.image} alt={d.name} width="150" />
+      <h3>{d.name}</h3>
+      <p><strong>Casa:</strong> {d.house}</p>
+      <p><strong>Actor:</strong> {d.actor}</p>
+    </div>
           ))}
         </div>
       </div>

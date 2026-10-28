@@ -3,11 +3,11 @@ import React from 'react';
 function PieDePagina() {
   return (
     <footer style={{
-      backgroundColor: '#222', // Fondo gris
-      color: 'white',          // Texto blanco
-      textAlign: 'center',     // Centrado
-      padding: '20px',         // Espacio arriba y abajo
-      marginTop: '40px',       // Lo separa del contenido de arriba
+      backgroundColor: '#222', 
+      color: 'white',          
+      textAlign: 'center',     
+      padding: '20px',         
+      marginTop: '40px',       
       width: '100%'
     }}>
       <p style={{ margin: 0 }}>

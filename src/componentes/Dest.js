@@ -2,7 +2,7 @@ import React from 'react';
 
 function Dest({ titulo, precio, imagen }) {
   return (
-    // 2. ESTILOS: Usamos CSS en línea (style={{}}) para armar la tarjeta.
+    // Usao (style={{}}) para armar la tarjeta.
     <div style={{ 
       border: '1px solid #ddd', // Borde
       borderRadius: '10px',     // Esquinas redondeadas

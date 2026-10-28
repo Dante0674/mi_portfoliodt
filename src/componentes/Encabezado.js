@@ -5,20 +5,20 @@ function Encabezado() {
   // Estilos para la barra contenedora
   const estiloBarra = {
     display: 'flex',
-    justifyContent: 'center', // Centra enlaces
+    justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#222',  // Fondo oscuro
+    backgroundColor: '#222',  
     padding: '15px 20px',
     boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
   };
 
   // Estilos para cada enlace
   const estiloLink = ({ isActive }) => ({
-    color: isActive ? '#61dafb' : 'white', // Celeste si estás, blanco si no
+    color: isActive ? '#61dafb' : 'white', 
     textDecoration: 'none',
     fontSize: '16px',
     fontWeight: 'bold',
-    margin: '0 20px', // Separación de cada botón
+    margin: '0 20px', 
     transition: 'color 0.3s'
   });
 

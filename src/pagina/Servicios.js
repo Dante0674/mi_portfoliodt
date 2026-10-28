@@ -34,7 +34,7 @@ function Servicios() {
             
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', marginTop: '30px' }}>
         
-        {/* EL MAP (Recorrer el array) */}
+        {/* Recorrer el array con Map */}
         {tecnologias.map((tec) => (
           <Dest 
             key={tec.id} /* key, evita errores */
